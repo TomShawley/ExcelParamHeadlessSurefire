@@ -32,7 +32,7 @@ public class ExcelParamTest {
 		XSSFWorkbook workbook = new XSSFWorkbook(file);
 		XSSFSheet sheet = workbook.getSheetAt(0);
 
-		Object[][] ob = new Object[sheet.getPhysicalNumberOfRows()][4];
+		Object[][] ob = new Object[sheet.getPhysicalNumberOfRows()-1][4];
 
 		for (int rowNum = 1; rowNum < sheet.getPhysicalNumberOfRows(); rowNum++) {
 			ob[rowNum - 1][0] = sheet.getRow(rowNum).getCell(0).getStringCellValue();
